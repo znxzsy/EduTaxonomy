@@ -1,0 +1,905 @@
+{
+  "taxonomy_version": "EduTaxonomy_Math_Public_Demo_v1",
+  "scope": "limited_math_demo",
+  "tables": {
+    "D1": {
+      "D1-PRI": {
+        "tag_id": "D1-PRI",
+        "tag_name": "小学",
+        "entry_type": "学段",
+        "stage": "一年级至六年级",
+        "stage_ids": []
+      },
+      "D1-JUN": {
+        "tag_id": "D1-JUN",
+        "tag_name": "初中",
+        "entry_type": "学段",
+        "stage": "七年级至九年级",
+        "stage_ids": []
+      },
+      "D1-SEN": {
+        "tag_id": "D1-SEN",
+        "tag_name": "普通高中",
+        "entry_type": "学段",
+        "stage": "必修、选择性必修、选修",
+        "stage_ids": []
+      },
+      "D1-MATH": {
+        "tag_id": "D1-MATH",
+        "tag_name": "数学",
+        "entry_type": "学科",
+        "stage": "小学｜初中｜普通高中",
+        "stage_ids": [
+          "D1-PRI",
+          "D1-JUN",
+          "D1-SEN"
+        ],
+        "definition": "按学习任务和问题模型建立分类。"
+      }
+    },
+    "D2": {
+      "M01": {
+        "tag_id": "M01",
+        "tag_name": "计算题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学",
+          "初中"
+        ],
+        "organization": "学习任务",
+        "definition": "纯计算，不需要理解复杂实际情境，直接进行数学运算。",
+        "examples": "口算、整数/小数/分数计算、竖式、脱式、简便计算、估算"
+      },
+      "M02": {
+        "tag_id": "M02",
+        "tag_name": "应用题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学",
+          "初中"
+        ],
+        "organization": "学习任务",
+        "definition": "根据文字情境或实际数量关系解决问题；经典问题模型保持独立细分。",
+        "examples": "基础数量关系、和差倍、鸡兔同笼、植树、行程、工程、年龄、经济消费、比例、浓度、几何测量等"
+      },
+      "M03": {
+        "tag_id": "M03",
+        "tag_name": "几何题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学",
+          "初中",
+          "普通高中"
+        ],
+        "organization": "学习任务",
+        "definition": "围绕图形认识、性质、度量和几何关系进行观察、计算或判断。",
+        "examples": "平面图形、角线段、周长、面积、组合图形、立体图形、表面积、体积、图形变换、位置方向、几何综合"
+      }
+    },
+    "D3": {
+      "D3_00001": {
+        "tag_id": "D3_00001",
+        "tag_name": "10以内加减法",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M01"
+        ],
+        "group": "按计算内容",
+        "definition": "10以内加法、减法"
+      },
+      "D3_00002": {
+        "tag_id": "D3_00002",
+        "tag_name": "20以内加减法",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M01"
+        ],
+        "group": "按计算内容",
+        "definition": "进位加法、退位减法"
+      },
+      "D3_00003": {
+        "tag_id": "D3_00003",
+        "tag_name": "100以内加减法",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M01"
+        ],
+        "group": "按计算内容",
+        "definition": "两位数加减法"
+      },
+      "D3_00004": {
+        "tag_id": "D3_00004",
+        "tag_name": "多位数加减法",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M01"
+        ],
+        "group": "按计算内容",
+        "definition": "多位数加减、连续进退位"
+      },
+      "D3_00005": {
+        "tag_id": "D3_00005",
+        "tag_name": "整数乘法",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M01"
+        ],
+        "group": "按计算内容",
+        "definition": "表内乘法、多位数乘法"
+      },
+      "D3_00006": {
+        "tag_id": "D3_00006",
+        "tag_name": "整数除法",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M01"
+        ],
+        "group": "按计算内容",
+        "definition": "表内除法、多位数除法"
+      },
+      "D3_00007": {
+        "tag_id": "D3_00007",
+        "tag_name": "小数加减法",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M01"
+        ],
+        "group": "按计算内容",
+        "definition": "小数加法、小数减法"
+      },
+      "D3_00008": {
+        "tag_id": "D3_00008",
+        "tag_name": "小数乘除法",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M01"
+        ],
+        "group": "按计算内容",
+        "definition": "小数乘法、小数除法"
+      },
+      "D3_00026": {
+        "tag_id": "D3_00026",
+        "tag_name": "求总数问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "基础数量关系",
+        "definition": "部分量加部分量"
+      },
+      "D3_00027": {
+        "tag_id": "D3_00027",
+        "tag_name": "求剩余问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "基础数量关系",
+        "definition": "总量减去已知部分"
+      },
+      "D3_00028": {
+        "tag_id": "D3_00028",
+        "tag_name": "求相差数问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "基础数量关系",
+        "definition": "大数减小数"
+      },
+      "D3_00029": {
+        "tag_id": "D3_00029",
+        "tag_name": "求较大数问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "基础数量关系",
+        "definition": "已知较小数和相差数"
+      },
+      "D3_00030": {
+        "tag_id": "D3_00030",
+        "tag_name": "求较小数问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "基础数量关系",
+        "definition": "已知较大数和相差数"
+      },
+      "D3_00031": {
+        "tag_id": "D3_00031",
+        "tag_name": "求几个几问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "基础数量关系",
+        "definition": "每份数量与份数"
+      },
+      "D3_00032": {
+        "tag_id": "D3_00032",
+        "tag_name": "平均分问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "基础数量关系",
+        "definition": "总量平均分成若干份"
+      },
+      "D3_00033": {
+        "tag_id": "D3_00033",
+        "tag_name": "倍数问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "基础数量关系",
+        "definition": "一个量是另一个量的几倍"
+      },
+      "D3_00034": {
+        "tag_id": "D3_00034",
+        "tag_name": "连续变化问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "基础数量关系",
+        "definition": "数量经过增加、减少后的变化"
+      },
+      "D3_00035": {
+        "tag_id": "D3_00035",
+        "tag_name": "和差问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "和差倍问题",
+        "definition": "已知两个数的和与差"
+      },
+      "D3_00036": {
+        "tag_id": "D3_00036",
+        "tag_name": "和倍问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "和差倍问题",
+        "definition": "已知两个数的和与倍数关系"
+      },
+      "D3_00037": {
+        "tag_id": "D3_00037",
+        "tag_name": "差倍问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "和差倍问题",
+        "definition": "已知两个数的差与倍数关系"
+      },
+      "D3_00038": {
+        "tag_id": "D3_00038",
+        "tag_name": "和倍综合问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "和差倍问题",
+        "definition": "多个数量之间的和与倍数关系"
+      },
+      "D3_00039": {
+        "tag_id": "D3_00039",
+        "tag_name": "差倍综合问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "和差倍问题",
+        "definition": "多个数量之间的差与倍数关系"
+      },
+      "D3_00040": {
+        "tag_id": "D3_00040",
+        "tag_name": "倍数变化问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "和差倍问题",
+        "definition": "数量变化前后的倍数关系"
+      },
+      "D3_00041": {
+        "tag_id": "D3_00041",
+        "tag_name": "鸡兔同笼",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "分配与经典数量模型",
+        "definition": "头数、脚数及不同对象数量"
+      },
+      "D3_00042": {
+        "tag_id": "D3_00042",
+        "tag_name": "假设法类题目",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "分配与经典数量模型",
+        "definition": "假设一种情况再调整；方法本身通常作为解题策略属性"
+      },
+      "D3_00043": {
+        "tag_id": "D3_00043",
+        "tag_name": "物品分配问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "分配与经典数量模型",
+        "definition": "按不同数量或规则分配物品"
+      },
+      "D3_00044": {
+        "tag_id": "D3_00044",
+        "tag_name": "盈亏问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "分配与经典数量模型",
+        "definition": "分配后出现不足或有余"
+      },
+      "D3_00045": {
+        "tag_id": "D3_00045",
+        "tag_name": "双盈问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "分配与经典数量模型",
+        "definition": "两种分配方式均有剩余"
+      },
+      "D3_00046": {
+        "tag_id": "D3_00046",
+        "tag_name": "双亏问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "分配与经典数量模型",
+        "definition": "两种分配方式均不足"
+      },
+      "D3_00047": {
+        "tag_id": "D3_00047",
+        "tag_name": "一盈一亏问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "分配与经典数量模型",
+        "definition": "一种分配有余，另一种不足"
+      },
+      "D3_00048": {
+        "tag_id": "D3_00048",
+        "tag_name": "人数与座位问题",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "分配与经典数量模型",
+        "definition": "人数、座位及空余数量关系"
+      },
+      "D3_00049": {
+        "tag_id": "D3_00049",
+        "tag_name": "两端都植树",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M02"
+        ],
+        "group": "植树与间隔问题",
+        "definition": "棵数与间隔数"
+      },
+      "D3_00126": {
+        "tag_id": "D3_00126",
+        "tag_name": "线段认识",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M03"
+        ],
+        "group": "平面图形认识"
+      },
+      "D3_00127": {
+        "tag_id": "D3_00127",
+        "tag_name": "直线与射线",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M03"
+        ],
+        "group": "平面图形认识"
+      },
+      "D3_00128": {
+        "tag_id": "D3_00128",
+        "tag_name": "角的认识",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M03"
+        ],
+        "group": "平面图形认识"
+      },
+      "D3_00129": {
+        "tag_id": "D3_00129",
+        "tag_name": "三角形认识",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M03"
+        ],
+        "group": "平面图形认识"
+      },
+      "D3_00130": {
+        "tag_id": "D3_00130",
+        "tag_name": "四边形认识",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M03"
+        ],
+        "group": "平面图形认识"
+      },
+      "D3_00131": {
+        "tag_id": "D3_00131",
+        "tag_name": "长方形认识",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M03"
+        ],
+        "group": "平面图形认识"
+      },
+      "D3_00132": {
+        "tag_id": "D3_00132",
+        "tag_name": "正方形认识",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M03"
+        ],
+        "group": "平面图形认识"
+      },
+      "D3_00133": {
+        "tag_id": "D3_00133",
+        "tag_name": "平行四边形认识",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "allowed_D2_ids": [
+          "M03"
+        ],
+        "group": "平面图形认识"
+      }
+    },
+    "D4": {
+      "D4_00001": {
+        "tag_id": "D4_00001",
+        "tag_name": "自然数",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "knowledge_domains": [
+          "数与运算·整数与数的认识"
+        ],
+        "related_D3_ids": [],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      },
+      "D4_00002": {
+        "tag_id": "D4_00002",
+        "tag_name": "整数",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "knowledge_domains": [
+          "数与运算·整数与数的认识"
+        ],
+        "related_D3_ids": [],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      },
+      "D4_00003": {
+        "tag_id": "D4_00003",
+        "tag_name": "数位与位值",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "knowledge_domains": [
+          "数与运算·整数与数的认识"
+        ],
+        "related_D3_ids": [],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      },
+      "D4_00004": {
+        "tag_id": "D4_00004",
+        "tag_name": "数的组成",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "knowledge_domains": [
+          "数与运算·整数与数的认识"
+        ],
+        "related_D3_ids": [],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      },
+      "D4_00010": {
+        "tag_id": "D4_00010",
+        "tag_name": "小数的意义",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "knowledge_domains": [
+          "数与运算·小数",
+          "数与代数／数与运算"
+        ],
+        "related_D3_ids": [],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      },
+      "D4_00012": {
+        "tag_id": "D4_00012",
+        "tag_name": "小数的性质",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "knowledge_domains": [
+          "数与运算·小数",
+          "数与代数／数与运算"
+        ],
+        "related_D3_ids": [],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      },
+      "D4_00015": {
+        "tag_id": "D4_00015",
+        "tag_name": "分数的意义",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "knowledge_domains": [
+          "数与运算·分数",
+          "数与代数／数量关系"
+        ],
+        "related_D3_ids": [],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      },
+      "D4_00021": {
+        "tag_id": "D4_00021",
+        "tag_name": "整数加减乘除",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "knowledge_domains": [
+          "数与运算·数的运算"
+        ],
+        "related_D3_ids": [],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      },
+      "D4_00022": {
+        "tag_id": "D4_00022",
+        "tag_name": "小数四则运算",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "knowledge_domains": [
+          "数与运算·数的运算"
+        ],
+        "related_D3_ids": [],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      },
+      "D4_00100": {
+        "tag_id": "D4_00100",
+        "tag_name": "正方形",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学",
+          "初中"
+        ],
+        "knowledge_domains": [
+          "图形与几何·平面几何基础",
+          "图形与几何／图形认识与性质"
+        ],
+        "related_D3_ids": [],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      },
+      "D4_00098": {
+        "tag_id": "D4_00098",
+        "tag_name": "矩形",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学",
+          "初中"
+        ],
+        "knowledge_domains": [
+          "图形与几何·平面几何基础",
+          "图形与几何／图形认识与性质"
+        ],
+        "related_D3_ids": [],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      },
+      "D4M-9ac43934c2667d0b": {
+        "tag_id": "D4M-9ac43934c2667d0b",
+        "tag_name": "角的认识",
+        "entrance_id": "D1-MATH",
+        "stages": [
+          "小学"
+        ],
+        "knowledge_domains": [
+          "图形与几何／图形认识与性质"
+        ],
+        "related_D3_ids": [
+          "D3_00128"
+        ],
+        "prerequisite_ids": [],
+        "related_D4_ids": []
+      }
+    },
+    "D6": {
+      "D6_004": {
+        "tag_id": "D6_004",
+        "tag_name": "填空题",
+        "facet": "作答形式",
+        "value_rule": "主项单选，可加独立输出",
+        "criterion": "自行填写答案、文字、符号或式子；填答位置清晰时可取最具体的子项。",
+        "example": "在指定空位写出答案",
+        "combination": "可并标横线、圆框、田字格等版式。补证明空缺用 D6_036，设问任务同时取 D6_109。"
+      },
+      "D6_025": {
+        "tag_id": "D6_025",
+        "tag_name": "绘图/填图题",
+        "facet": "作答形式",
+        "value_rule": "主项单选，可加独立输出",
+        "criterion": "在已有图中标注、补充或绘制内容",
+        "example": "在图中补画对称部分"
+      },
+      "D6_105": {
+        "tag_id": "D6_105",
+        "tag_name": "计算或求解",
+        "facet": "设问任务",
+        "value_rule": "可多选",
+        "criterion": "列式、运算、求未知量或表达式",
+        "example": "求 x 的值；直接写得数"
+      },
+      "D6_110": {
+        "tag_id": "D6_110",
+        "tag_name": "绘制与标注",
+        "facet": "设问任务",
+        "value_rule": "可多选",
+        "criterion": "制图、补绘或按要求标示位置",
+        "example": "在数轴上标出−2"
+      },
+      "D6_201": {
+        "tag_id": "D6_201",
+        "tag_name": "写或填",
+        "facet": "规定作答动作",
+        "value_rule": "可多选",
+        "criterion": "填写字词、数值、字母、符号、式子或文本",
+        "example": "在横线上写出选项字母"
+      },
+      "D6_210": {
+        "tag_id": "D6_210",
+        "tag_name": "画图或补绘",
+        "facet": "规定作答动作",
+        "value_rule": "可多选",
+        "criterion": "生成或补充线段、图形、图像及示意图",
+        "example": "补画轴对称图形的另一半"
+      },
+      "D6_302": {
+        "tag_id": "D6_302",
+        "tag_name": "括号空",
+        "facet": "答题区版式",
+        "value_rule": "可多选",
+        "criterion": "用圆括号承接输入内容或选项字母",
+        "example": "（  ）里填合适的词"
+      },
+      "D6_315": {
+        "tag_id": "D6_315",
+        "tag_name": "坐标网格",
+        "facet": "答题区版式",
+        "value_rule": "可多选",
+        "criterion": "作答应写画在给定坐标轴或网格内",
+        "example": "在平面直角坐标系内描点"
+      },
+      "D6_702": {
+        "tag_id": "D6_702",
+        "tag_name": "数值或数量",
+        "facet": "答案内容",
+        "value_rule": "可多选",
+        "criterion": "预期填写整数、小数、分数、百分数或测量值",
+        "example": "把总吨数写在横线上"
+      },
+      "D6_713": {
+        "tag_id": "D6_713",
+        "tag_name": "图形、线条或可视标记",
+        "facet": "答案内容",
+        "value_rule": "可多选",
+        "criterion": "预期输出图形、涂色区域、线条或图示中明确的标记",
+        "example": "把缺少的线段画出来"
+      },
+      "D6_403": {
+        "tag_id": "D6_403",
+        "tag_name": "几何或结构示意图",
+        "facet": "题面线索",
+        "value_rule": "可多选",
+        "criterion": "给定几何关系、器件结构、实验装置或过程图",
+        "example": "根据平面图找对应点"
+      },
+      "D6_420": {
+        "tag_id": "D6_420",
+        "tag_name": "独立答题位置数",
+        "facet": "题面线索",
+        "value_rule": "非负整数或空值",
+        "criterion": "整数。每个可独立填写或标记的目标计 1；多个选项构成同一个选择位置；没有专设位置为 0；裁切无法计数留空",
+        "example": "四个选项共用一个答题括号计 1"
+      },
+      "D6_521": {
+        "tag_id": "D6_521",
+        "tag_name": "作答无法观测",
+        "facet": "实际作答特征",
+        "value_rule": "可多选，基于已作答图",
+        "criterion": "缺少学生作答图、作答区域裁切或成像不足，本组单独使用",
+        "example": "只有印刷题面，未取得作答图",
+        "combination": "无法观测和可见未作答分别用 D6_521、D6_520。"
+      },
+      "D6_501": {
+        "tag_id": "D6_501",
+        "tag_name": "实写短答案",
+        "facet": "实际作答特征",
+        "value_rule": "可多选，基于已作答图",
+        "criterion": "可见手写字词、字母、数值或短答案",
+        "example": "空里写有“北京”"
+      },
+      "D6_601": {
+        "tag_id": "D6_601",
+        "tag_name": "核对选项、单一值或固定集合",
+        "facet": "评阅要求",
+        "value_rule": "可多选，有证据才标",
+        "criterion": "有明确封闭作答范围，需核对标记、值或所选集合",
+        "example": "选择题；给固定商与余数"
+      },
+      "D6_603": {
+        "tag_id": "D6_603",
+        "tag_name": "检查过程或证明链",
+        "facet": "评阅要求",
+        "value_rule": "可多选，有证据才标",
+        "criterion": "题面要求列式、步骤、依据、推导或证明",
+        "example": "判断证明是否有效并写出依据"
+      }
+    }
+  }
+}

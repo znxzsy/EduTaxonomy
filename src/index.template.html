@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="EduTaxonomy 数学示例：仅公开少量分类节点，演示点阵浏览、图内逐级展开与标签检索。">
+<title>EduTaxonomy 数学示例图谱</title>
+<style>
+{{STYLES}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>EduTaxonomy 数学示例图谱</h1>
+    <p class="lead">少量数学分类示例。点击框和圆点逐级展开，查看题型、主题、知识点与作答特征。</p>
+    <div class="facts" aria-label="公开示例节点数">
+      <div class="fact"><span>D1 学段、学科与课程</span><strong>4</strong></div>
+      <div class="fact"><span>D2 大题型／知识模块</span><strong>3</strong></div>
+      <div class="fact"><span>D3 细分题型／主题</span><strong>40</strong></div>
+      <div class="fact"><span>D4 原子知识点</span><strong>12</strong></div>
+      <div class="fact"><span>D6 作答与题面特征</span><strong>16</strong></div>
+    </div>
+    <p class="scope-line">公开示例共 75 个节点 · 仅展示部分数学分类与知识点 · D6 八个维度各选少量条目</p>
+  </header>
+  <div class="tools" role="group" aria-label="图谱操作">
+    <div class="locate">
+      <select id="jump" aria-label="定位学段、学科或 D6"><option value="">定位学科或层级</option></select>
+      <div class="search">
+        <input id="query" type="search" role="combobox" placeholder="搜节点名称或 ID，例如鸡兔同笼" aria-label="搜索正式节点" autocomplete="off" aria-autocomplete="list" aria-controls="matches" aria-expanded="false">
+        <div class="search-list" id="matches" role="listbox" aria-label="搜索结果" hidden></div>
+      </div>
+    </div>
+    <div class="nav">
+      <button id="minus" type="button" aria-label="缩小">−</button><output id="scale" class="scale" aria-label="当前缩放"></output><button id="plus" type="button" aria-label="放大">＋</button>
+      <button id="back" type="button" disabled>← 上一步</button><button id="overview" type="button">示例总览</button><button id="start" type="button">回到开头</button>
+    </div>
+  </div>
+  <div class="branch-bar" id="branch-bar" hidden>
+    <nav id="trail" class="trail" aria-label="浏览路径"></nav>
+    <div class="branch-nav"><input id="branch-query" type="search" autocomplete="off" placeholder="查找当前点阵" aria-label="查找当前点阵"><button id="node-info" type="button" aria-expanded="false" aria-controls="detail">节点说明</button></div>
+  </div>
+  <figure class="graph" id="graph" aria-label="可缩放的数学示例图谱">
+    <canvas id="surface" tabindex="0" aria-label="分类图。方向键移动，正负键缩放。可使用搜索以键盘打开节点。"></canvas>
+    <div id="tooltip" class="tooltip" hidden></div>
+    <div class="minimap" id="minimap" hidden><p>图中位置</p><canvas id="mini" tabindex="0" aria-label="小地图。点击、拖动或按上下键定位。"></canvas></div>
+    <aside id="detail" class="detail" aria-label="节点详情" aria-live="polite" hidden>
+      <div class="detail-top"><h2 id="node-name"></h2><button id="close" type="button">关闭</button></div>
+      <div id="node-data"></div>
+    </aside>
+  </figure>
+  <div class="graph-note"><span>点框进入下一级点阵，点圆点打开对应条目。蓝点表示题型或主题，金点表示知识点，灰蓝点表示 D6 特征。</span><span>悬停显示名称。按 ⌘K 或 Ctrl+K 搜索。</span></div>
+<nav class="project-links" aria-label="项目资源"><a href="https://github.com/znxzsy/EduTaxonomy">GitHub 项目</a><a href="examples/math-nodes.csv" download>数学示例 CSV</a><a href="examples/math-taxonomy.json" download>数学示例 JSON</a></nav>
+</main>
+<script id="data" type="application/json">{{GRAPH_DATA}}</script>
+<script>
+{{APP}}
+</script>
+</body>
+</html>
