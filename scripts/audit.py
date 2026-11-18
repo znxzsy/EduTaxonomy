@@ -7,8 +7,8 @@ ALLOWED={
  '.gitignore','.nojekyll','LICENSE','README.md','index.html',
  '.github/workflows/validate.yml','src/index.template.html','src/styles.css','src/app.js',
  'examples/math-graph.json','examples/math-taxonomy.json','examples/math-nodes.csv',
- 'docs/schema.md','docs/public-release.md',
- 'scripts/build.mjs','scripts/audit.py','tests/test_taxonomy.py','assets/math.png'
+ 'docs/schema.md','docs/public-release.md','docs/methodology.md',
+ 'scripts/build.mjs','scripts/audit.py','tests/test_taxonomy.py','assets/math.png','assets/overview.png'
 }
 PATTERNS={
  'home_directory':re.compile(r'/(?:Users|home)/[A-Za-z0-9_\-]+/|[A-Z]:\\Users\\',re.I),

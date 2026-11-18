@@ -3,26 +3,51 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="EduTaxonomy 数学示例：仅公开少量分类节点，演示点阵浏览、图内逐级展开与标签检索。">
-<title>EduTaxonomy 数学示例图谱</title>
+<meta name="description" content="从教材拆解、知识原子化与术语对齐到跨学段知识图谱。展示完整体系与数学细节，开源部分样例。">
+<title>EduTaxonomy 教材知识图谱</title>
 <style>
 {{STYLES}}
 </style>
 </head>
 <body>
 <main>
-  <header>
-    <h1>EduTaxonomy 数学示例图谱</h1>
-    <p class="lead">少量数学分类示例。点击框和圆点逐级展开，查看题型、主题、知识点与作答特征。</p>
-    <div class="facts" aria-label="公开示例节点数">
-      <div class="fact"><span>D1 学段、学科与课程</span><strong>4</strong></div>
-      <div class="fact"><span>D2 大题型／知识模块</span><strong>3</strong></div>
-      <div class="fact"><span>D3 细分题型／主题</span><strong>40</strong></div>
-      <div class="fact"><span>D4 原子知识点</span><strong>12</strong></div>
-      <div class="fact"><span>D6 作答与题面特征</span><strong>16</strong></div>
-    </div>
-    <p class="scope-line">公开示例共 75 个节点 · 仅展示部分数学分类与知识点 · D6 八个维度各选少量条目</p>
+  <header class="project-header">
+    <h1>EduTaxonomy<span class="title-cn">教材知识图谱</span></h1>
+    <p class="lead">从教材目录与章节知识出发，经过知识原子化、术语对齐和关系校验，组织跨学段的教育知识体系。</p>
+    <nav class="section-nav" aria-label="项目导航"><a href="#system-overview">体系总图</a><a href="#math-detail">数学细节</a><a href="#method">构建方法</a><a href="#demo">交互样例</a><a href="#contact">获取完整版本</a></nav>
   </header>
+  <section id="system-overview" class="presentation-section">
+    <h2>完整体系总览</h2>
+    <p class="section-copy">覆盖小学、初中、普通高中与部分本科基础课程。当前目录共 7,484 个正式节点，包含 17 个 K12 学科入口和 3 门本科基础课程。</p>
+    <a class="figure-link" href="assets/overview.png" aria-label="放大完整体系总图"><img src="assets/overview.png" alt="完整 EduTaxonomy 图谱总览：D1、D2、D3、D4、D6 和各学科节点分布" width="1440" height="1040"></a>
+  </section>
+  <section id="math-detail" class="presentation-section">
+    <h2>数学应用题的细节</h2>
+    <p class="section-copy">同一个上位任务下，保留求总数、平均分、和差、倍数、鸡兔同笼、行程、工程等不同问题模型。任务分类与解题时调用的知识点分别维护。</p>
+    <a class="figure-link" href="assets/math.png" aria-label="放大数学应用题细节图"><img src="assets/math.png" alt="完整版本中的数学应用题细节图，展示下级题型、主题名称与标签 ID" width="3132" height="1458" loading="lazy"></a>
+    <p class="figure-caption">两张展示图来自完整体系。下方交互与下载文件仅包含已开源的部分样例。</p>
+  </section>
+  <section id="method" class="presentation-section">
+    <h2>从拆书到图谱</h2>
+    <p class="section-copy">将教材的章节结构、知识内容和学习任务分开建模，再通过来源证据与类型约束建立关联。</p>
+    <ol class="method-flow">
+      <li><strong>教材结构解析</strong><span>按学段、学科、版本、章节组织输入，区分目录、章节摘要与正文材料。</span></li>
+      <li><strong>知识原子化</strong><span>拆解概念、性质、规律、方法与例题中的知识候选，保留上下文。</span></li>
+      <li><strong>来源证据绑定</strong><span>候选记录保留材料定位、证据片段和处理状态，稳定标识支持重复追踪。</span></li>
+      <li><strong>术语归一与版本对齐</strong><span>生成重复、同义和跨版本映射候选，保留来源差异并逐项审核。</span></li>
+      <li><strong>多层知识建模</strong><span>D2/D3 组织任务与主题，D4 维护知识点，D6 独立描述题面和作答属性。</span></li>
+      <li><strong>层次约束与多路检索</strong><span>结合学科、学段、词项匹配与特征检索扩大候选，再校验 ID 和关系。</span></li>
+    </ol>
+    <p class="section-copy"><a href="https://github.com/znxzsy/EduTaxonomy/blob/main/docs/methodology.md">阅读方法说明</a></p>
+  </section>
+  <section id="contact" class="contact-section">
+    <h2>获取完整版本</h2>
+    <p>本仓库开源可视化浏览器与部分数学样例。如需完整知识图谱、分类字典或交流合作，请联系作者微信：<strong>znxzsy</strong>。</p>
+  </section>
+  <section id="demo" class="presentation-section demo-intro">
+    <h2>开源交互样例</h2>
+    <p class="section-copy">点击点阵逐级浏览。当前开源部分包含 75 个节点，其中 12 个 D4 知识点。</p>
+  </section>
   <div class="tools" role="group" aria-label="图谱操作">
     <div class="locate">
       <select id="jump" aria-label="定位学段、学科或 D6"><option value="">定位学科或层级</option></select>

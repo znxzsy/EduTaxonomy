@@ -57,3 +57,19 @@ input{font-size:13px;padding:5px 9px;width:clamp(160px,24vw,290px)}
 @media print{.tools,.detail,.tooltip,.minimap{display:none!important}.graph canvas{height:650px}body{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 .project-links{display:flex;flex-wrap:wrap;gap:9px 20px;margin-top:16px;font-size:12px}.project-links a{color:var(--blue);text-underline-offset:3px}
 
+
+html{scroll-behavior:smooth;scroll-padding-top:22px}
+.project-header{max-width:1120px}.title-cn{display:inline-block;margin-left:.25em}.section-nav{display:flex;gap:12px 25px;flex-wrap:wrap;margin-top:19px;padding-bottom:19px;border-bottom:1px solid var(--line)}
+.section-nav a,.presentation-section a{color:var(--blue);text-underline-offset:4px}
+.presentation-section{margin-top:42px}.presentation-section h2,.contact-section h2{font-size:23px;line-height:1.35;letter-spacing:-.02em}
+.section-copy{max-width:88ch;margin:10px 0 18px;color:var(--muted)}
+.figure-link{display:block;border:1px solid var(--line);background:#fff;overflow:hidden;border-radius:5px}
+.figure-link img{display:block;width:100%;height:auto}.figure-caption{color:var(--muted);font-size:12px;margin-top:10px}
+.method-flow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 35px;padding-left:23px;margin:20px 0 16px}
+.method-flow li{padding:13px 6px 17px 5px;border-bottom:1px solid var(--line)}
+.method-flow strong{display:block;font-size:16px;margin-bottom:5px}.method-flow span{display:block;color:var(--muted);font-size:14px;max-width:55ch}
+.contact-section{margin-top:35px;padding:23px 25px;background:var(--blue-bg);border-left:3px solid #7b9fc4}
+.contact-section p{margin-top:9px;max-width:95ch}.contact-section strong{color:var(--blue)}
+.demo-intro{margin-bottom:0}.demo-intro .section-copy{margin-bottom:0}
+@media(max-width:650px){.title-cn{display:block;margin:4px 0 0}.method-flow{grid-template-columns:1fr}.presentation-section{margin-top:30px}.contact-section{padding:18px}.section-nav{gap:9px 18px}.presentation-section h2,.contact-section h2{font-size:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

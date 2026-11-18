@@ -67,4 +67,21 @@ class TaxonomyContract(unittest.TestCase):
   spec=importlib.util.spec_from_file_location('audit',ROOT/'scripts/audit.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
   self.assertEqual(m.audit()['issues'],[])
 
+ def test_complete_presentation_and_limited_data(self):
+  html=(ROOT/'index.html').read_text(encoding='utf-8')
+  self.assertIn('完整体系总览',html)
+  self.assertIn('assets/overview.png',html)
+  self.assertIn('assets/math.png',html)
+  self.assertIn('作者微信：<strong>znxzsy</strong>',html)
+  self.assertIn('7,484',html)
+  ids=re.findall(r'<[^>]+\bid="([^"]+)"',html)
+  self.assertEqual(len(ids),len(set(ids)))
+  self.assertEqual(len(GRAPH),75)
+  for image in ['assets/overview.png','assets/math.png']:
+   body=(ROOT/image).read_bytes();self.assertTrue(body.startswith(b'\x89PNG\r\n\x1a\n'))
+   offset=8
+   while offset<len(body):
+    size=int.from_bytes(body[offset:offset+4],'big');kind=body[offset+4:offset+8]
+    self.assertNotIn(kind,[b'eXIf',b'tEXt',b'iTXt',b'zTXt']);offset+=size+12
+
 if __name__=='__main__':unittest.main()
